@@ -1,0 +1,17 @@
+<main class="p-3">
+  <h1 class="text-center">Buscador</h1>
+  <form class="mb-3" [formGroup]="form">
+    <mat-form-field style="width: 100%">
+      <input
+        [formControl]="searchControl"
+        matInput
+        placeholder="Naruto Shippuden"
+      />
+    </mat-form-field>
+  </form>
+  <section class="grid">
+    <div class="col-2" *ngFor="let anime of animes">
+      <app-item [anime]="anime"></app-item>
+    </div>
+  </section>
+</main>
